@@ -1,3 +1,4 @@
+import 'package:burc_rehberi/burc_item.dart';
 import 'package:flutter/material.dart';
 import 'model/burc.dart';
 import 'data/strings.dart';
@@ -10,11 +11,21 @@ class BurcRehberi extends StatelessWidget {
   }
   @override
   Widget build(BuildContext context) {
+    var myTextStyle = Theme.of(context).textTheme;
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Burc_rehberi"),
+        title: const Text("Burclar Listesi",style: TextStyle(fontSize: 24),),
       ),
-      body: Container(),
+      body: Center(
+        child: Center(
+          child: ListView.builder(itemBuilder: (context,index){
+            return BurcItem(listelenenburc: tumBurclar[index]);
+          },
+          itemCount: tumBurclar.length,
+          ),
+
+        ),
+      ),
     );
   }
 

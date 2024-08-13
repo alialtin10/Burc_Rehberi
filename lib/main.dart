@@ -11,10 +11,12 @@ class BurcApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      //debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        appBarTheme: AppBarTheme(color: Colors.pink),
         primarySwatch: Colors.pink,
         primaryColor: Colors.pink,
+        
       ),
       home: BurcRehberi(),
     );
