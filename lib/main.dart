@@ -1,5 +1,7 @@
+import 'package:burc_rehberi/route_generator.dart';
 import 'package:flutter/material.dart';
 import 'Burc_rehberi.dart';
+import 'route_generator.dart';
 
 void main(List<String> args) {
   runApp(const BurcApp());
@@ -18,7 +20,7 @@ class BurcApp extends StatelessWidget {
         primaryColor: Colors.pink,
         
       ),
-      home: BurcRehberi(),
+      onGenerateRoute: RouteGenerator.routeGenrator,
     );
   }
 }

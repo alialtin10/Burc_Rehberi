@@ -2,6 +2,7 @@ import 'package:burc_rehberi/burc_detay.dart';
 import 'package:burc_rehberi/model/burc.dart';
 import 'package:flutter/material.dart';
 
+
 class BurcItem extends StatelessWidget {
   final Burc listelenenburc;
 
@@ -16,7 +17,7 @@ class BurcItem extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: ListTile(
           onTap: (){
-            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>BurcDetay(secilenBurc: listelenenburc),));
+            Navigator.pushNamed(context, '/burcDetay',arguments: listelenenburc);
           },
           leading: Image.asset("/home/agv/Desktop/Burc_Rehberi/images/"+listelenenburc.burcKucukResim ),
           title: Text(listelenenburc.burcAdi,style: myTextStyle.headlineMedium,),
